@@ -3,7 +3,7 @@
 Nama: Annisa Luthfi Fadillah
 
 **Diketahui:**
-pegawai: Ridwan 
+pegawai: Ridwan <br>
 jabatan: manager 
 status: menikah  
 
