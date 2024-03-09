@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">Data Pegawai</h1>
+    <br>
+
+    <script>
+        let pegawai = "Ridwan";
+        let jabatan = "Manager";
+        let status = "Menikah";
+        let gajiP = 0;
+        let ternary = 0;
+
+        if (jabatan == "Manager") gajiP = 15000000;
+        else if (jabatan == "Asisten Manager") gajiP = 10000000;
+        else gajiP = 5000000;
+
+        let tunjangan = 0.15*gajiP;
+        let bpjs = 0.10*gajiP;
+
+        if (status == "Menikah") ternary = 0.20 * gajiP;
+        else ternary = 0;
+
+        let total = gajiP+tunjangan+bpjs+ternary;
+
+        let tableHTML = "<table align='center' border='1' cellpadding='10'>" +
+                            "<thead>" +
+                                "<tr>" +
+                                    "<th align='center'> Nama Pegawai </th>" +
+                                    "<th align='center'> Jabatan </th>" +
+                                    "<th align='center'> Status </th>" +
+                                    "<th align='center'> Gaji Pokok </th>" +
+                                    "<th align='center'> Tunjangan </th>" +
+                                    "<th align='center'> BPJS </th>" +
+                                    "<th align='center'> Tunjangan Keluarga </th>" +
+                                "</tr>" +
+                            "</thead>" +
+                            "<tbody>" +
+                                "<tr>" +
+                                    "<td align='center'>" + pegawai + "</td>" +
+                                    "<td align='center'>" + jabatan + "</td>" +
+                                    "<td align='center'>" + status + "</td>" +
+                                    "<td align='center'>" + gajiP + "</td>" +
+                                    "<td align='center'>" + tunjangan + "</td>" +
+                                    "<td align='center'>" + bpjs + "</td>" +
+                                    "<td align='center'>" + ternary + "</td>" +
+                                "</tr>" +
+                            "</tbody>" +
+                            "<tfoot>" +
+                                "<tr>" +
+                                    "<td colspan='6' align='center'><b>Total</b></td>" +
+                                    "<td align='center'><b>" + total + "</b></td>"
+                                "</tr>" +
+                            "</tfoot>"+
+                        "</table>";
+
+        document.write(tableHTML);
+    </script>
+</body>
+</html>
